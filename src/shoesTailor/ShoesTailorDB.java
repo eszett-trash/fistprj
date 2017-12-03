@@ -1,32 +1,49 @@
-package fistprj;
+package shoesTailor;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class ShoesTailorDB {
-	private static ShoesTailorDB Instance;// = new ShoesTailorDB();
+	private static ShoesTailorDB Instance = new ShoesTailorDB();
 
 	ShoesTailorDB() {
 		STOCK_VO sv = new STOCK_VO();
 		sv.setStock_vo_id(0);
-		sv.setName("색상 : 빨강");
+		sv.setName("색상:빨강");
 		sv.setPrice(100);
 		sv.setKind(4);
 		stockList.add(sv);
+		
+		STOCK_VO sv2 = new STOCK_VO();
+		sv2.setStock_vo_id(0);
+		sv2.setName("색상:빨강");
+		sv2.setPrice(100);
+		sv2.setKind(4);
+		stockList.add(sv2);
 	}
 
-	List<USER_VO> userList = new ArrayList<USER_VO>(); // 사용자 정보
-	List<SALES_VO> salesList = new ArrayList<SALES_VO>(); // 매상
-	List<STOCK_VO> stockList = new ArrayList<STOCK_VO>(); // 재고
-	List<CART_VO> cart = new LinkedList<CART_VO>(); // 장바구니
-	List<MESSAGE_VO> message = new ArrayList<MESSAGE_VO>(); // 쪽지
-	List<COLOR_VO> colorList = new ArrayList<COLOR_VO>(); // 색상
+	//리스트
+	private List<USER_VO> userList = new ArrayList<USER_VO>(); // 사용자 정보
+	private List<SALES_VO> salesList = new ArrayList<SALES_VO>(); // 매상
+	private List<STOCK_VO> stockList = new ArrayList<STOCK_VO>(); // 재고
+	private List<CART_VO> cart = new LinkedList<CART_VO>(); // 장바구니
+	private List<MESSAGE_VO> message = new ArrayList<MESSAGE_VO>(); // 쪽지
+	private List<COLOR_VO> colorList = new ArrayList<COLOR_VO>(); // 색상
 
 	// 객체 생성
 	public static ShoesTailorDB getInstance() {
 		return Instance;
 	}
+	
+	//사이즈 게터
+	public int size_userList()		{ return userList.size();}
+	public int size_salesList()		{ return salesList.size();}
+	public int size_stockList()		{ return stockList.size();}
+	public int size_cart()			{ return cart.size();}
+	public int size_message()		{ return message.size();}
+	public int size_colorList()		{ return colorList.size();}
+	
 
 	// 단순 조회
 	public String view_userList(int index) {
@@ -180,44 +197,32 @@ public class ShoesTailorDB {
 
 	// 삭제
 	public void delete_userList(int index) {
-		if (userList.isEmpty()) {
-			return;
-		}
+		if (userList.isEmpty()) {return;}
 		userList.remove(index);
 	}
 
 	public void delete_salesList(int index) {
-		if (salesList.isEmpty()) {
-			return;
-		}
+		if (salesList.isEmpty()) {return;}
 		salesList.remove(index);
 	}
 
 	public void delete_stockList(int index) {
-		if (stockList.isEmpty()) {
-			return;
-		}
+		if (stockList.isEmpty()) {return;}
 		stockList.remove(index);
 	}
 
 	public void delete_cart(int index) {
-		if (cart.isEmpty()) {
-			return;
-		}
+		if (cart.isEmpty()) {return;}
 		cart.remove(index);
 	}
 
 	public void delete_message(int index) {
-		if (message.isEmpty()) {
-			return;
-		}
+		if (message.isEmpty()) {return;}
 		message.remove(index);
 	}
 
 	public void delete_colorList(int index) {
-		if (colorList.isEmpty()) {
-			return;
-		}
+		if (colorList.isEmpty()) {return;}
 		colorList.remove(index);
 	}
 

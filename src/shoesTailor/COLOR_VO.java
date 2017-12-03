@@ -1,4 +1,4 @@
-package fistprj;
+package shoesTailor;
 
 public class COLOR_VO {
 	private String color;

@@ -1,4 +1,4 @@
-package fistprj;
+package shoesTailor;
 
 public class USER_VO {
 private int user_vo_id; 		//유저 고유번호 (아이디 외의 식별번호)

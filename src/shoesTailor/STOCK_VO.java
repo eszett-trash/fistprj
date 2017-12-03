@@ -1,4 +1,4 @@
-package fistprj;
+package shoesTailor;
 
 public class STOCK_VO {
 	private int stock_vo_id;
