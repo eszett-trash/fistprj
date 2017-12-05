@@ -195,10 +195,8 @@ public class ServiceImpl implements IService {
 		}
 	}
 
-	public void update_message(int index, String account, String contents) {
-		if (index >= sdb.message().size()) {
-			return;
-		} else {
+	public void update_message(String account, String contents) {
+		for (int index = 0; index < sdb.message().size(); index++) {
 			if (account != "null") {
 				sdb.message().get(index).setAccount(account);
 			}
@@ -260,8 +258,16 @@ public class ServiceImpl implements IService {
 		for (int j = 0; j < sdb.userList().size(); j++) {
 			if (sdb.userList().get(j).getAccount().equals(account)) {
 				if (!sdb.userList().get(j).isAdmin()) {
-					update_userList(account, "", "", "", 0, "", false, true);
+					update_userList(account, "null", "null", "null", 0, "null", false, true);
 				}
+			}
+		}
+	}
+	
+	public void userUnactivated(String account) {
+		for (int j = 0; j < sdb.userList().size(); j++) {
+			if (sdb.userList().get(j).getAccount().equals(account)) {
+					update_userList(account, "null", "null", "null", 0, "null", false, false);
 			}
 		}
 	}
@@ -292,7 +298,6 @@ public class ServiceImpl implements IService {
 		}
 		return add;
 	}
-
 
 	public boolean loginType(String account) {
 		for (int i = 0; i < sdb.userList().size(); i++) {

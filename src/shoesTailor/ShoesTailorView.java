@@ -479,12 +479,41 @@ public class ShoesTailorView {
 				call_myPage(account);
 				changeInfomation();
 			case "2":
-				view_user_message();
-			case "3":
+				message();
 
+			case "3":
+				sv.userUnactivated(account);
 				break;
 			case "#": // 뒤로가기
 				user();
+			default:
+				System.out.println("입력이 잘못 되었습니다.");
+			}
+		}
+
+	}
+	
+	// ------------------------------- 문의 사항
+	private void message() {
+		System.out.println(" ■■■■■■■■■■■■■■■■■■ 문의 사항 ■■■■■■■■■■■■■■■■■■ ");
+		while (true) {
+			System.out.println("\t 1. 문의 사항 목록");
+			System.out.println("\t 2. 문의 사항 작성");
+			System.out.println("\t #. 뒤로가기");
+			String result = sc.next();
+
+			switch (result) {
+			case "1":
+				view_user_message();
+				break;
+			case "2":
+				System.out.println("문의 사항을 입력하세요");
+				String write_message = sc.nextLine();
+				write_message=write_message.trim();
+				sv.update_message(account, write_message);
+				break;
+			case "#": // 뒤로가기
+				myPage();
 			default:
 				System.out.println("입력이 잘못 되었습니다.");
 			}
