@@ -5,6 +5,7 @@ public class STOCK_VO {
 	private String name;
 	private int amount;
 	private int price;
+	private String color;
 	private int kind;
 	
 	public int getStock_vo_id() {
@@ -30,6 +31,12 @@ public class STOCK_VO {
 	}
 	public void setPrice(int price) {
 		this.price = price;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
 	}
 	public int getKind() {
 		return kind;

@@ -7,5 +7,6 @@ public class ShoesTailorMain {
 		ShoesTailorView sv = new ShoesTailorView();
 
 		sv.start();
+
 	}
 }

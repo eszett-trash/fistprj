@@ -5,6 +5,7 @@ public class CART_VO {
 	private String name;
 	private int price;
 	private int orderNumber;
+	private int stock_vo_id;
 	
 	public int getCart_vo_id() {
 		return cart_vo_id;
@@ -29,5 +30,11 @@ public class CART_VO {
 	}
 	public void setOrderNumber(int orderNumber) {
 		this.orderNumber = orderNumber;
+	}
+	public int getStock_vo_id() {
+		return stock_vo_id;
+	}
+	public void setStock_vo_id(int stock_vo_id) {
+		this.stock_vo_id = stock_vo_id;
 	}
 }
