@@ -1,11 +1,11 @@
 package shoesTailor;
 
 public class CART_VO {
-	private int cart_vo_id; //카트 구별 id
-	private String name; // 상품명
-	private int price; // 상품 가격
-	private int orderNumber; // 주문번호
-	private int stock_vo_id; //재고 구별 id
+	private int cart_vo_id;
+	private String name;
+	private int price;
+	private int orderNumber;
+	private int stock_vo_id;
 	
 	public int getCart_vo_id() {
 		return cart_vo_id;

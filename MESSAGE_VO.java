@@ -3,9 +3,9 @@ package shoesTailor;
 import java.util.Calendar;
 
 public class MESSAGE_VO {
-	private String account; //계정 id
-	private String contents; //메세지 내용
-	private String date; //날짜
+	private String account;
+	private String contents;
+	private String date;
 
 	public String getDate() {
 		return date;

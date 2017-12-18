@@ -7,6 +7,7 @@ private String password;		//비밀번호
 private String deliveryAddress; //배송주소
 private String cellphone;		//핸드폰번호
 private int sales;				//매상
+private String purchaseGoods; 		// 구매 부속
 private boolean isAdmin; 		//관리자 유무
 private boolean isActivated; 		//활성화 유무
 
@@ -45,6 +46,12 @@ public int getSales() {
 }
 public void setSales(int sales) {
 	this.sales = sales;
+}
+public String getPurchaseGoods() {
+	return purchaseGoods;
+}
+public void setPurchaseGoods(String purchaseGoods) {
+	this.purchaseGoods = purchaseGoods;
 }
 public boolean isAdmin() {
 	return isAdmin;

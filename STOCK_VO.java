@@ -1,12 +1,12 @@
 package shoesTailor;
 
 public class STOCK_VO {
-	private int stock_vo_id; //재고 구별 id
-	private String name; //상품명
-	private int amount; //상품 수량
-	private int price; //상품 가격
-	private String color; // 상품 컬러
-	private int kind; //상품 코드
+	private int stock_vo_id;
+	private String name;
+	private int amount;
+	private int price;
+	private String color;
+	private int kind;
 	
 	public int getStock_vo_id() {
 		return stock_vo_id;
